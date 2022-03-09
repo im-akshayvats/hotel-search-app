@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CssBaseline from '@mui/material/CssBaseline';
+import Home from './components/Home/Home';
+import Hotels from './components/Hotel/Hotels';
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <CssBaseline />
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/hotels/:hotelId' element={<Hotels />} >
+          </Route>
+          <Route path='/*' element={<h1>Not found</h1>} />
+        </Routes>
+      </Router>
+    </>
+  )
 }
-
-export default App;
