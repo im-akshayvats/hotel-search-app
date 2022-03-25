@@ -13,10 +13,8 @@ function SearchEngine(props) {
         url: 'https://hotels4.p.rapidapi.com/locations/v2/search',
         params: {query, locale: 'en_US', currency: 'USD'},
         headers: {
-
-
-
-
+          'x-rapidapi-host': 'hotels4.p.rapidapi.com',
+          'x-rapidapi-key': 'b3bc971869mshde3c7ff196c5a0fp1d9df4jsn676fe1f671c0'
         }
       };
       
@@ -43,10 +41,8 @@ function SearchEngine(props) {
           currency: 'USD'
         },
         headers: {
-          
-
-
-          
+          'x-rapidapi-host': 'hotels4.p.rapidapi.com',
+          'x-rapidapi-key': 'b3bc971869mshde3c7ff196c5a0fp1d9df4jsn676fe1f671c0'
         }
       };
       
