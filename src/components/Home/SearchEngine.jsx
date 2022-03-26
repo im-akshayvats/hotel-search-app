@@ -12,10 +12,9 @@ function SearchEngine(props) {
         method: 'GET',
         url: 'https://hotels4.p.rapidapi.com/locations/v2/search',
         params: {query, locale: 'en_US', currency: 'USD'},
-        headers: {
-          'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-          'X-RapidAPI-Key': 'b82501618cmshea10a84d57e1502p1db499jsn76bfb61a5bc4'
-        }
+        // api key goes here 
+
+
       };
       
       axios.request(options)
@@ -40,10 +39,10 @@ function SearchEngine(props) {
           locale: 'en_US',
           currency: 'USD'
         },
-        headers: {
-          'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-          'X-RapidAPI-Key': 'b82501618cmshea10a84d57e1502p1db499jsn76bfb61a5bc4'
-        }
+        // api key goes here 
+
+
+
       };
       
       axios.request(options)

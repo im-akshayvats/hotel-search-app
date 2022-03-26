@@ -97,10 +97,11 @@ function Hotel() {
         method: 'GET',
         url: 'https://hotels4.p.rapidapi.com/properties/get-hotel-photos',
         params: {id: hotelId},
-        headers: {
-          'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-          'X-RapidAPI-Key': 'b82501618cmshea10a84d57e1502p1db499jsn76bfb61a5bc4'
-        }
+        // api key goes here 
+
+
+
+
       };
       
       axios.request(options)
@@ -123,10 +124,12 @@ function Hotel() {
           currency: 'USD',
           locale: 'en_US'
         },
-        headers: {
-          'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-          'X-RapidAPI-Key': 'b82501618cmshea10a84d57e1502p1db499jsn76bfb61a5bc4'
-        }
+        // api key goes here 
+
+
+
+
+        
       };
       
       axios.request(options)
