@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper";
+import { Oval } from 'react-loader-spinner';
 
 import 'swiper/css';
 import "swiper/css/navigation";
@@ -97,8 +98,8 @@ function Hotel() {
         url: 'https://hotels4.p.rapidapi.com/properties/get-hotel-photos',
         params: {id: hotelId},
         headers: {
-          'x-rapidapi-host': 'hotels4.p.rapidapi.com',
-          'x-rapidapi-key': 'b3bc971869mshde3c7ff196c5a0fp1d9df4jsn676fe1f671c0'
+          'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
+          'X-RapidAPI-Key': 'b82501618cmshea10a84d57e1502p1db499jsn76bfb61a5bc4'
         }
       };
       
@@ -123,8 +124,8 @@ function Hotel() {
           locale: 'en_US'
         },
         headers: {
-          'x-rapidapi-host': 'hotels4.p.rapidapi.com',
-          'x-rapidapi-key': 'b3bc971869mshde3c7ff196c5a0fp1d9df4jsn676fe1f671c0'
+          'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
+          'X-RapidAPI-Key': 'b82501618cmshea10a84d57e1502p1db499jsn76bfb61a5bc4'
         }
       };
       
@@ -205,7 +206,16 @@ function Hotel() {
       </>
     )
   }
-  return <></>
+  return (
+    <div style={{width:'100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+      <Oval 
+        height="50"
+        width="50"
+        color='white'
+        ariaLabel='loading'
+      />
+    </div>
+  )
 }
 
 export default Hotel
